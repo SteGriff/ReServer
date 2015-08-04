@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ReServer.Core.Configuration.Config" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAQAAAAAAAAAAAAAAAAgAAAAAAgAAAAA=</HashCode>
+      <FileName>Configuration\Config.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Exceptions.ReserverConversionException" Collapsed="true">
+    <Position X="8" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\ReserverConversionException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.MatchingFileFinder" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MatchingFileFinder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Responses.TextResponse" Collapsed="true">
+    <Position X="4.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Responses\DebugResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Responses.DefaultFileResponse" Collapsed="true">
+    <Position X="6.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Responses\DefaultFileResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Responses.FileResponse" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Responses\FileResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Responses.RedirectionResponse" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Responses\RedirectionResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReServer.Core.Responses.RSResponse" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAAAAAgAQBYCAAAAAA=</HashCode>
+      <FileName>Responses\RSResponse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
