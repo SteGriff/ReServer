@@ -50,9 +50,11 @@
   <ItemGroup>
     <Compile Include="HttpHyperServer.cs" />
     <Compile Include="HttpServerThread.cs" />
+    <Compile Include="HttpSite.cs" />
     <Compile Include="Output.cs" />
     <Compile Include="OutputMode.cs" />
     <Compile Include="RouteHandler.cs" />
+    <Compile Include="RSThread.cs" />
     <Compile Include="Service1.cs">
       <SubType>Component</SubType>
     </Compile>

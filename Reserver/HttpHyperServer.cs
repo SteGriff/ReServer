@@ -1,4 +1,5 @@
 ﻿using ReServer.Core.Configuration;
+using ReServer.Models;
 using ReServer.Server;
 using System;
 using System.Collections.Generic;
@@ -13,9 +14,8 @@ namespace ReServer.Core
         // Continue the listen loop?
         private bool _listen = true;
 
-        // Declare listener and attached domains
-        private HttpListener _listener;
-        private IList<Uri> _uris;
+        // The listening site objects
+        private List<HttpSite> _sites = new List<HttpSite>();
 
         /// <summary>
         /// Construct a HyperServer and set its debug output mode
@@ -47,52 +47,39 @@ namespace ReServer.Core
                 return;
             }
 
-            //Instantiate the listener
-            _listener = new HttpListener();
-
-            //_listener.AuthenticationSchemes = AuthenticationSchemes.Basic;
-            //_listener.Realm = 
-
-            // Bind the listener to all of the remote web addresses
-            // specified in the config
-            _uris = Config.Server.Sites.SelectMany(s => s.RemoteAddresses).ToList();
-
-            Output.Write("Binding remote URLs:");
-            foreach (Uri u in _uris)
+            Output.Write("Starting sites...");
+            foreach (Site s in Config.Server.Sites)
             {
-                Output.Write("\t" + u.AbsoluteUri);
-                _listener.Prefixes.Add(u.AbsoluteUri);
+                HttpSite httpSite = new HttpSite(s);
+
+                // Update internal list of HttpSites
+                _sites.Add(httpSite);
+
+                // Start the HttpSite, on its own thread
+                ThreadPool.QueueUserWorkItem(new WaitCallback(StartSiteThread), httpSite);                
             }
-            
-            //Start listening for requests!
-            _listener.Start();
+
+            Output.Write("All sites up!");
+
+            // We do no work in this thread from here on,
+            // so let's reduce priority
+            Thread.CurrentThread.Priority = ThreadPriority.Lowest;
 
             while (_listen)
             {
-                Output.Write("HttpHyperServer waiting");
-
-                HttpListenerContext context;
-
-                // Wait for a request (blocking)
-                try
-                {
-                    context = _listener.GetContext();
-
-                    // When a request has been received
-                    //  Start a handler on a new thread, with the current HTTP context
-                    ThreadPool.QueueUserWorkItem(new WaitCallback(ProvisionNewThread), context);     
-                }
-                catch (HttpListenerException)
-                {
-                    // We drop in here if the listener is Aborted during use
-                    // (i.e. when the user presses 'x' to quit)
-                    _listen = false;
-
-                    //End the program
-                    return;
-                }
-           
+                // We're waiting for an 'x' key press (to quit)
+                // Reduce duty cycle by sleeping
+                Thread.Sleep(1000);
             }
+
+            // We have quit - kill every HttpSite
+            foreach (HttpSite s in _sites)
+            {
+                s.Stop();
+            }
+
+            Output.Write("All sites stopped.");
+            Output.Write("You can close ReServer.");
 
         }
 
@@ -114,17 +101,18 @@ namespace ReServer.Core
             }
 
             //Received x key
-            _listener.Abort();
+            _listen = false;
         }
 
         /// <summary>
-        /// Container method for starting a new HttpServerThread
+        /// Start the listener for the passed-in HttpSite.
+        /// This is a blocking method; run it on its own Thread to provide availability
         /// </summary>
-        /// <param name="httpContext">The HttpListenerContext to pass in to the thread</param>
-        private void ProvisionNewThread(object httpContext)
+        /// <param name="httpSite">The HttpSite to Start</param>
+        private void StartSiteThread(object httpSite)
         {
-            var handler = new HttpServerThread((HttpListenerContext) httpContext);
-            handler.HandleRequest();
+            var theSite = (HttpSite)httpSite;
+            theSite.Start();
         }
 
     }

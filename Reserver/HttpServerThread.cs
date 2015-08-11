@@ -9,22 +9,11 @@ using System.Threading;
 
 namespace ReServer.Server
 {
-    public class HttpServerThread
+    public class HttpServerThread : RSThread
     {
         private HttpListenerRequest _request;
         private HttpListenerResponse _response;
         private RSRequest rsRequest;
-
-        /// <summary>
-        /// The name of the ServerThread for use in logging
-        /// </summary>
-        public string Name
-        {
-            get
-            {
-                return "Thread-" + Thread.CurrentThread.ManagedThreadId;
-            }
-        }
 
         /// <summary>
         /// Construct new ServerThread, using HttpListenerContext to populate request and response objects
