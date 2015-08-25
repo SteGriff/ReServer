@@ -19,11 +19,12 @@ namespace ReServer.Core.Requests
         public IList<MediaTypeWithQualityHeaderValue> AcceptTypes { get; private set; }
         public NameValueCollection Headers { get; private set; }
         public CookieCollection Cookies { get; private set; }
+        public HttpListenerBasicIdentity Identity { get; private set; }
 
-        public RSRequest(HttpListenerRequest httpRequest)
+        public RSRequest(HttpListenerContext context)
         {
-            //(Uri requestUri, NameValueCollection headers, string contentType, CookieCollection cookies)
-            //_request.Url, _request.Headers, _request.ContentType, _request.Cookies
+            //Just for terseness
+            var httpRequest = context.Request;
 
             //Get the correct Website instance from URI mapping
             Website = Config.Server.Sites
@@ -40,6 +41,9 @@ namespace ReServer.Core.Requests
             AcceptTypes = AcceptableTypes();
 
             Cookies = httpRequest.Cookies;
+
+            //Get the username and password
+            Identity = ((HttpListenerBasicIdentity)context.User.Identity);
         }
 
         /// <summary>
@@ -83,9 +87,32 @@ namespace ReServer.Core.Requests
             return null;
         }
 
-        public bool PathEndsInSlash()
+        public bool IsAuthorised
         {
-            return LocalPath[LocalPath.Length - 1] == '/';
+            get
+            {
+                var user = Website.Users.Where(u => u.Name == Identity.Name).FirstOrDefault();
+                if (user != null)
+                {
+                    string usernameSalt = Identity.Name.ToLower();
+                    string enteredPassword = PasswordCrypt.Encrypt(Identity.Password, usernameSalt);
+                    if (user.PasswordCrypt == enteredPassword)
+                    {
+                        return true;
+                    }
+                }
+
+                return false;
+            }
+        }
+
+
+        public bool PathEndsInSlash
+        {
+            get
+            {
+                return LocalPath[LocalPath.Length - 1] == '/';
+            }
         }
 
     }

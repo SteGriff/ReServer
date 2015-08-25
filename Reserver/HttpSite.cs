@@ -51,8 +51,8 @@ namespace ReServer.Core
             _listener = new HttpListener();
 
             //Set up client authentication
-            //_listener.AuthenticationSchemes = AuthenticationSchemes.Basic;
-            //_listener.Realm = 
+            _listener.AuthenticationSchemes = AuthenticationSchemes.Basic;
+            _listener.Realm = _website.Name;
 
             // Bind the listener to all of the remote web addresses
             // specified in the config

@@ -16,6 +16,13 @@ namespace ReServer.Models
         [XmlElement("remote")]
         public List<string> RemoteAddressStrings { get; set; }
 
+        [XmlElement("protect")]
+        public string ProtectedActions { get; set; }
+
+        [XmlArray("users")]
+        [XmlArrayItem("user")]
+        public List<User> Users { get; set; }
+        
         [XmlIgnore]
         private List<Uri> _remoteAddresses;
 
@@ -32,6 +39,14 @@ namespace ReServer.Models
                     _remoteAddresses = RemoteAddressStrings.Select(a => new Uri(a)).ToList();
                 }
                 return _remoteAddresses;
+            }
+        }
+
+        public bool RequiresAuthentication
+        {
+            get
+            {
+                return Users.Count > 0;
             }
         }
 

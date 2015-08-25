@@ -24,23 +24,45 @@ namespace ReServer.Server
             _request = context.Request;
             _response = context.Response;
 
+            rsRequest = new RSRequest(context);
+
             Output.Write(Name + " initialised");
         }
 
         /// <summary>
-        /// Based on request URI, method, and headers; form an appropriate response and carry out necessary actions on the server
+        /// Wrapper method to handle the transport details (i.e. stream) of the response object
         /// </summary>
         public void HandleRequest()
         {
             Output.Write(Name + " handling '" + _request.Url.AbsoluteUri + "'");
 
+            RSResponse rsResponse = GenerateResponse();
+
+            // Feed the bytes using outputstream and close
+            _response.ContentLength64 = rsResponse.Bytes.Length;
+
+            Stream output = _response.OutputStream;
+            output.Write(rsResponse.Bytes, 0, rsResponse.Bytes.Length);
+            output.Close();
+        }
+
+        /// <summary>
+        /// Based on request URI, method, and headers; form an appropriate response and carry out necessary actions on the server
+        /// </summary>
+        private RSResponse GenerateResponse()
+        {
             var handler = new RouteHandler(_request.HttpMethod);
-            rsRequest = new RSRequest(_request);
-            
+
             //ReServer (RS) response object
             // Class used to build the raw output
             // which will be fed into the HttpResponse OutputStream 
             RSResponse rsResponse = new RSResponse();
+
+            // Check authentication details and return early if not valid
+            if (!rsRequest.IsAuthorised)
+            {
+                return new StatusCodeResponse(HttpStatusCode.Unauthorized);
+            }
 
             // Check first whether it is a dir
             if (Directory.Exists(rsRequest.LocalPath))
@@ -49,7 +71,7 @@ namespace ReServer.Server
 
                 // localPath is a directory:
                 // Check it ends with a slash
-                if (rsRequest.PathEndsInSlash())
+                if (rsRequest.PathEndsInSlash)
                 {
                     Output.Write("Getting default file");
 
@@ -119,13 +141,8 @@ namespace ReServer.Server
                     _response.AppendHeader(h.Key, h.Value);
                 }
             }
-            
-            // Feed the bytes using outputstream and close
-            _response.ContentLength64 = rsResponse.Bytes.Length;
 
-            Stream output = _response.OutputStream;
-            output.Write(rsResponse.Bytes, 0, rsResponse.Bytes.Length);
-            output.Close();
+            return rsResponse;
         }
 
         /// <summary>
