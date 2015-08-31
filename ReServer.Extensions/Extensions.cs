@@ -46,5 +46,6 @@ namespace ReServer.Extensions
         {
             return contentTypeString.Split(new char[] { ';' })[0];
         }
+
     }
 }

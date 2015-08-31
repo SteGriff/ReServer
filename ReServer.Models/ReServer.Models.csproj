@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Collaboration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Protectorate.cs" />
     <Compile Include="Server.cs" />
     <Compile Include="Site.cs" />
     <Compile Include="User.cs" />

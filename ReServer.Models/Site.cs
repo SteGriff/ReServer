@@ -17,7 +17,7 @@ namespace ReServer.Models
         public List<string> RemoteAddressStrings { get; set; }
 
         [XmlElement("protect")]
-        public string ProtectedActions { get; set; }
+        public Protectorate ProtectedActions { get; set; }
 
         [XmlArray("users")]
         [XmlArrayItem("user")]

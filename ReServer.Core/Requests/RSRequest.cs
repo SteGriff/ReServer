@@ -21,10 +21,15 @@ namespace ReServer.Core.Requests
         public CookieCollection Cookies { get; private set; }
         public HttpListenerBasicIdentity Identity { get; private set; }
 
+        private string Method;
+
         public RSRequest(HttpListenerContext context)
         {
             //Just for terseness
             var httpRequest = context.Request;
+
+            //Store the method (for authorisation checks)
+            Method = context.Request.HttpMethod;
 
             //Get the correct Website instance from URI mapping
             Website = Config.Server.Sites
@@ -91,21 +96,71 @@ namespace ReServer.Core.Requests
         {
             get
             {
-                var user = Website.Users.Where(u => u.Name == Identity.Name).FirstOrDefault();
-                if (user != null)
+                if (RequiresAuthorisation)
                 {
-                    string usernameSalt = Identity.Name.ToLower();
-                    string enteredPassword = PasswordCrypt.Encrypt(Identity.Password, usernameSalt);
-                    if (user.PasswordCrypt == enteredPassword)
+                    var user = Website.Users.Where(u => u.Name == Identity.Name).FirstOrDefault();
+                    if (user != null)
                     {
-                        return true;
+                        //User exists
+                        string usernameSalt = Identity.Name.ToLower();
+                        string enteredPassword = PasswordCrypt.Encrypt(Identity.Password, usernameSalt);
+                        if (user.PasswordCrypt == enteredPassword)
+                        {
+                            //Correct password: allow
+                            return true;
+                        }
                     }
-                }
 
-                return false;
+                    //All other cases, i.e. no user or wrong password: reject
+                    return false;
+                }
+                else
+                {
+                    //Auth not required: allow
+                    return true;
+                }
             }
         }
 
+        private bool RequiresAuthorisation
+        {
+            get
+            {
+                if (Website.ProtectedActions == Protectorate.none)
+                {
+                    //Nothing is protected; doesn't require auth
+                    return false;
+                }
+                else if (Website.ProtectedActions == Protectorate.all)
+                {
+                    //All protected; all require auth
+                    return true;
+                }
+                else
+                {
+                    //Write is protected
+                    // Return true if the attempted action is a protected one
+                    return Website.ProtectedActions == TargetAction;
+                }
+            }
+        }
+
+        private Protectorate TargetAction
+        {
+            get
+            {
+                switch (Method)
+                {
+                    case "POST":
+                    case "DELETE":
+                    case "PUT":
+                    case "PATCH":
+                        return Protectorate.write;
+                    default:
+                        return Protectorate.all;
+                }
+            }
+        }
 
         public bool PathEndsInSlash
         {
