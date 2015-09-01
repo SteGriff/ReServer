@@ -98,12 +98,18 @@ namespace ReServer.Core.Requests
             {
                 if (RequiresAuthorisation)
                 {
-                    var user = Website.Users.Where(u => u.Name == Identity.Name).FirstOrDefault();
+                    //Get user corresponding to entered value
+                    var user = Website.Users
+                        .Where(u => u.Name == Identity.Name)
+                        .FirstOrDefault();
+
                     if (user != null)
                     {
-                        //User exists
+                        //User exists – check password by hashing the entered value
                         string usernameSalt = Identity.Name.ToLower();
-                        string enteredPassword = PasswordCrypt.Encrypt(Identity.Password, usernameSalt);
+                        string enteredPassword =
+                            PasswordCrypt.Encrypt(Identity.Password, usernameSalt);
+
                         if (user.PasswordCrypt == enteredPassword)
                         {
                             //Correct password: allow

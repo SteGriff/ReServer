@@ -68,6 +68,7 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="ServerClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ReServer.Collaboration\ReServer.Collaboration.csproj">

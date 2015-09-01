@@ -42,14 +42,6 @@ namespace ReServer.Models
             }
         }
 
-        public bool RequiresAuthentication
-        {
-            get
-            {
-                return Users.Count > 0;
-            }
-        }
-
         /// <summary>
         /// Check whether this website is mapped to the host domain of the given Uri
         /// </summary>

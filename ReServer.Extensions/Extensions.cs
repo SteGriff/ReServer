@@ -1,11 +1,9 @@
-﻿using System.Net.Mime;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
+using System.Net.Mime;
 
 namespace ReServer.Extensions
 {
-
     public static class Extensions
     {
         public static ContentType GetContentType(this string FileName)
@@ -19,27 +17,9 @@ namespace ReServer.Extensions
             return ExtraMimeMapping.GetFileExtensionCandidates(ContentType);
         }
 
-        public static ContentType ToContentType(this string ContentTypeString)
-        {
-            return new ContentType(ContentTypeString);
-        }
-
         public static string ContentTypeLastPart(this string ContentType)
         {
             return ContentType.Split(new[] { '/' }).Last().ToString();
-        }
-
-        public static string Capitalise(this string s)
-        {
-            switch (s.Length)
-            {
-                case 0:
-                    return "";
-                case 1:
-                    return s.ToUpper();
-                default:
-                    return s[0].ToString().ToUpper() + s.Substring(1).ToLower();
-            }
         }
 
         public static string RemoveSubtypes(this string contentTypeString)
