@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReServer.Server", "Reserver\ReServer.Server.csproj", "{E27B7736-585D-42F7-A81E-BF79682335AD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReServer.Models", "ReServer.Models\ReServer.Models.csproj", "{DB15BA66-7B56-4262-AD21-8E000F03FC40}"
@@ -14,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReServer.Core", "ReServer.Core\ReServer.Core.csproj", "{E9D54D3F-55CD-41C4-81F1-AFD271C9FCDC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReServer.Collaboration", "ReServer.Collaboration\ReServer.Collaboration.csproj", "{6BE245C3-BF8C-4622-9C61-31CD645C5D07}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ReServer.Diagrams", "ReServer.Diagrams\ReServer.Diagrams.modelproj", "{11100B95-7CF0-4028-A518-3BF6D1B058F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{6BE245C3-BF8C-4622-9C61-31CD645C5D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BE245C3-BF8C-4622-9C61-31CD645C5D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BE245C3-BF8C-4622-9C61-31CD645C5D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11100B95-7CF0-4028-A518-3BF6D1B058F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11100B95-7CF0-4028-A518-3BF6D1B058F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11100B95-7CF0-4028-A518-3BF6D1B058F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11100B95-7CF0-4028-A518-3BF6D1B058F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

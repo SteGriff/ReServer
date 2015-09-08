@@ -4,6 +4,9 @@
 # SG don't want no diagrams
 *.cd
 
+# SG don't want no shortcuts
+*.lnk
+
 # User-specific files
 *.suo
 *.user

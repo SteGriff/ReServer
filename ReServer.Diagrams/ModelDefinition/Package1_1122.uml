@@ -1,0 +1,1252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b6a0c266-4e21-4464-aae3-cd93bda15dce"
+  name="Core"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b155732e-c7b7-4cd4-b4a2-32be11634338"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReServer.Core"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="28b47140-2ee4-49f0-b214-79d03345a95e"
+        name="HttpHyperServer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="21bb252b-5358-48a8-9a77-2c7d3a7f3f1c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c6b64fae-62cc-4a69-bf67-c3c9f5b9e838"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4751ac37-1fee-4fce-af81-5d2e8c5d3405">
+                <propertyInstance
+                  Id="ea6a982f-cfbf-4199-8efc-b7e517ec1a1d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="04fa725a-a5f5-4f2b-80ff-1372b9b6e23d">
+                <propertyInstance
+                  Id="54d77444-1d44-430d-bb44-410d384a44cf"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5623919c-3578-4e2c-9f83-0af861d4e423">
+                <propertyInstance
+                  Id="ff54c4d7-3f3d-4f12-9e61-211ec4bb8c42"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d32133f-168e-42ec-9afc-91009a8a5bf5">
+                <propertyInstance
+                  Id="f4cfe068-a420-467c-a475-7b23f10db35f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9ed4d24-5511-4543-95ab-b01b554f833d">
+                <propertyInstance
+                  Id="949fe862-a646-4593-979a-b6eff3157034"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="ccc71ea2-4546-4dde-85bc-f1d873ae1580"
+            isDerived="false"
+            sourceEndRoleName="HttpHyperServer"
+            targetEndRoleName="HttpSite"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9c5f68c5-b370-4698-a6e7-5bc1a16b7e6f"
+              LastKnownName="HttpSite"
+              LastKnownLocation="Package1_1122.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="74f99de8-a3eb-47bd-89ed-48f50127be1f"
+                  name="HttpHyperServer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="380b5e40-f7e5-4c4b-86cd-3b0fd18a4550"
+                  name="HttpSite"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="7eebd6b9-b641-4c97-90fe-c84a517acaae"
+            name="_listen"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="1526af25-0a9e-4049-8c5b-2eb64c2cdca6"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D_listen"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="16376abb-491a-43b1-8a72-c5191add9a9b"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8fafb8fa-ca32-44a3-abf4-272af5178384">
+                    <propertyInstance
+                      Id="9624d2bc-e6fd-4d2a-9c04-fc0e053fa439"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eede60fa-316a-4593-a355-4bcf41b9bb31">
+                    <propertyInstance
+                      Id="3aeace12-759a-4ee6-ba89-d8e7e012daa5"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a379b530-8886-47c4-a000-ad85b48ec6a2">
+                    <propertyInstance
+                      Id="f21f49b3-7935-4a5c-8643-48d7725ff2ec"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a52e27d-770b-402d-ab0e-92175e7b9eec">
+                    <propertyInstance
+                      Id="34f9abdd-52d7-46fd-9533-6b11b1895cb8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0c0138e5-0767-4594-bbaf-064bf369a3a8">
+                    <propertyInstance
+                      Id="0f6c361a-cb23-45da-92ec-1c2814cc36d6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ReServer.Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="3e66c2df-ca45-46c4-82aa-03cd15e1c8cf"
+            name="_sites"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c4fb656e-4a17-4464-adcb-d3f352fe9d51"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D_sites"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9851cb03-37de-4d5b-a9e5-360f75b7d3e7"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="461e06c2-f74f-433c-b8e9-b28671e5f7cd">
+                    <propertyInstance
+                      Id="882b1e26-36ef-4d31-af65-ae920663b028"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1311a5e1-bf10-4910-a806-47be01f1935b">
+                    <propertyInstance
+                      Id="ed0c20f7-50e7-4ccf-8fcb-64c172ea9eb1"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3d53e1f-2f46-4f02-8221-f232da6b640a">
+                    <propertyInstance
+                      Id="bc7c8dbf-a7ac-4560-b798-3cc6cabbb258"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="32483829-2992-45d3-aad5-01f62a34e0cf">
+                    <propertyInstance
+                      Id="0400a077-9de4-4683-ae20-f18f4cea92c8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f48ec7f0-6e70-4ea0-963e-1b7246ab6550">
+                    <propertyInstance
+                      Id="6c1c143b-0b16-456f-94b6-aa020135d63d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="580c0c30-e762-403f-aa00-5490c4c127bc"
+                LastKnownName="List&lt;HttpSite‎&gt;"
+                LastKnownLocation="Package4_1122.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="6939f83f-952a-46c8-b020-2feca2484ee9"
+            name="HttpHyperServer"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="d03f7558-9485-4a62-8144-2b432e7b1edb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d145fd27-2cb1-42a4-a0fe-05caa1612ffb"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9db560ec-708d-45ca-bbb1-5a366414789e">
+                    <propertyInstance
+                      Id="9ace5429-d90c-4969-8b83-338a3839a7d0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="751c7e02-aa17-45da-aac3-c2209f7e2261">
+                    <propertyInstance
+                      Id="3c188afb-466d-4a82-8ccd-7e339c74e403"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="283e86c0-ea16-4a30-92f1-8f7cf4a61deb">
+                    <propertyInstance
+                      Id="b94e29e3-ae72-42be-9f6d-b94f0d0a80c4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="91ace40e-db18-42b2-be36-f122e2dc89f4">
+                    <propertyInstance
+                      Id="36d548b4-49af-4b21-85d6-3b5fda6e2e27"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="03ad0c72-b0e7-4662-833a-01f8258d99f2">
+                    <propertyInstance
+                      Id="ab8f63c8-05b2-4abb-bfdc-fdb1d45e7d2d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0273fbdf-dfb7-410d-9f70-ac425db64247">
+                    <propertyInstance
+                      Id="8ff389b5-7d48-41fb-b880-89527e0fc9f4"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="64a04fc1-4e9f-4448-8ee9-f838728f5f11"
+            name="Start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2fe2489d-59b3-4b62-a98d-a8c141095dcf"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4e2e5945-6141-4eed-a3e4-e8a2a1783b74"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a66bd02-1721-4bb4-89c3-d3ceefbd6687">
+                    <propertyInstance
+                      Id="f19b01f9-e85b-40ee-ae78-956402b001cc"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0efc453f-279b-4fe0-9822-127374d0e537">
+                    <propertyInstance
+                      Id="38dd62d5-dcd0-4be6-bd43-a40cd34f8ff7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f515ac11-c13b-4129-9438-ff90aad8a3a6">
+                    <propertyInstance
+                      Id="2a8abf1b-ff27-40bb-8d83-74553103ec07"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27717cf7-e5d4-4979-af21-1eec6c6a72ba">
+                    <propertyInstance
+                      Id="4eab1265-308e-49f9-a8bf-217ed38029af"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="269eb2ce-765e-4818-9812-efe501181ec9">
+                    <propertyInstance
+                      Id="df64bb4e-f2f5-49e6-ba51-cccfc8008fa7"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="21f76100-6e6a-4a03-80ac-1bdd8798d5a6">
+                    <propertyInstance
+                      Id="eebd2057-9882-4cf1-bcfc-c2e528766daf"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4cd52f28-656c-40bf-9f84-b2413a2bf785"
+            name="AcceptUserInterrupt"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="deebd046-ac3d-4b20-ba2e-2e3851de9974"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D(Name%3DAcceptUserInterrupt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="0393f636-ea46-45e9-82ae-60f7bd5c612a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="463ecc31-ba77-44ea-8da6-d7b95e9e15e3">
+                    <propertyInstance
+                      Id="f07d9b51-6189-4f50-8a5e-23c951f54f2c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a502a0a8-275b-457e-a7d3-2d939aa61412">
+                    <propertyInstance
+                      Id="715457f8-0011-41d3-a857-e1c6451931d4"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9d5f4bf1-8715-443f-bd6f-8b2f3b8ae701">
+                    <propertyInstance
+                      Id="81528492-e955-421b-9eef-e5de7f827a3f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18b7c010-9013-4ec1-9054-c5b7c896f7d0">
+                    <propertyInstance
+                      Id="8e7ca253-071d-4802-9f9e-8e80fb4557d2"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ab1e9405-29b4-4c3f-9c33-b8d9aedf6538">
+                    <propertyInstance
+                      Id="a56619e2-f50c-4748-8742-d413ac4ea80c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="75489ae8-586a-4b12-9b55-7548162d9129">
+                    <propertyInstance
+                      Id="b61f9f6a-0b3d-4886-a06b-bb3f47fcec94"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="eb8ffcc7-c2b8-4f5a-98af-1c8cfc0c97f3"
+                  name="state"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="d04e6081-2c50-4626-853a-d3c7f680bfab"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D(Name%3DAcceptUserInterrupt OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dstate"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1bb1990a-f1e5-4b81-bd49-66a69406540b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1122.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="37538dd3-e028-4a36-95b5-8bb58c2c78bc"
+            name="StartSiteThread"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8ef7ed3e-95ad-482a-b3bb-b6f27f2455a1"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D(Name%3DStartSiteThread OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="860fba51-b35d-4790-9fa8-a4bd23f1517e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7468488d-97d6-42f6-a651-477b51f65366">
+                    <propertyInstance
+                      Id="e555a9bb-8f9b-4738-b543-09ad37f6bfd2"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b8a53c7-ba08-47b1-bbcf-29540a99fd67">
+                    <propertyInstance
+                      Id="20559485-7462-44cf-a6ad-ee44c9eb3c8b"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6476c1bf-1222-4422-95f9-15f1b00d3617">
+                    <propertyInstance
+                      Id="6d168569-a93a-4610-b700-bdcf7309e30f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="38e0aeab-840b-4bd3-ac33-8bdd9d39e8d7">
+                    <propertyInstance
+                      Id="808a8096-3109-4519-bd02-7952cee12c4e"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="33ee4f34-7363-49e0-892e-d2f866643790">
+                    <propertyInstance
+                      Id="87dc8351-6d03-483d-93e8-de4d223cb55d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e7c69ec-9bff-44cc-8a88-75296bab9ae3">
+                    <propertyInstance
+                      Id="bcce5656-ced0-494c-87ec-0a09201ae9da"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9f48b819-04f7-49c4-a3fa-461bdbd4db00"
+                  name="httpSite"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="818d76f6-51ce-41c8-b6e7-b2b4f2456055"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpHyperServer Member%3D(Name%3DStartSiteThread OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DhttpSite"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1bb1990a-f1e5-4b81-bd49-66a69406540b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1122.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9c5f68c5-b370-4698-a6e7-5bc1a16b7e6f"
+        name="HttpSite"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="57e7ae67-817f-4bb5-99e4-0846e799deb1"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7443ede2-8853-4f20-aa66-f4d649ee0b3a"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40ba9378-36b5-4fba-af61-383e7da32f5f">
+                <propertyInstance
+                  Id="6b5bd3ee-cb90-4d62-a51b-e0cae9f25053"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cb5590cb-cc44-43d1-b307-fa627c664b48">
+                <propertyInstance
+                  Id="5feae41b-ad2c-436e-a0f3-ac26c60f6aec"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9d389126-3f31-42e3-9b45-b498006b9570">
+                <propertyInstance
+                  Id="15b5688e-ad0e-418b-a8d2-497a7558b0f2"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="04135e05-7b41-4177-938f-f1f58cafc56c">
+                <propertyInstance
+                  Id="c244651f-e273-4f44-a092-dec72ba1ab1a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b03338ff-7d78-47ae-9a55-c6125317022d">
+                <propertyInstance
+                  Id="f2c66c7a-036c-42d3-aa75-a28cd99380c0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <generalsInternal>
+          <generalization
+            Id="36dbd36b-6720-4c07-887b-2b7c7b253bd2"
+            isSubstitutable="false">
+            <classMoniker
+              Id="d59f21e5-2da0-4572-8a20-f8a785220e8e"
+              LastKnownName="RSThread"
+              LastKnownLocation="Package_1123.uml" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association
+            Id="ecb1f26f-cb3a-4887-ab40-3ad0b3c4bd03"
+            isDerived="false"
+            sourceEndRoleName="HttpSite"
+            targetEndRoleName="Site"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="f12d242b-e5f4-4f06-ba57-693f0c17c10d"
+              LastKnownName="Site"
+              LastKnownLocation="Package4_1123.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c88075c3-c23b-48c4-9e99-55f88dbaac04"
+                  name="HttpSite"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4f44fe88-151c-4f59-ad37-a83eda2bbf56"
+                  name="Site"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="74630be2-d759-44e5-9df7-5a5194ea6978"
+            name="_listen"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b40f7002-9027-47a8-8ede-a5b19fbeac4f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D_listen"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2dd18315-723b-42c3-bd3f-aafde8cf1250"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b5510f3-dd48-4739-babc-15eb00ea84dd">
+                    <propertyInstance
+                      Id="e625389d-5df7-4e58-973f-e08948489b36"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbfe8de3-f838-4ddf-b211-6ab29b1a6279">
+                    <propertyInstance
+                      Id="72a1c1c1-8846-44ee-8066-80ed63836136"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e0b8238-f50b-431d-989e-d1e722f0fc05">
+                    <propertyInstance
+                      Id="97549224-a462-4b18-9d44-2bf8972f0d96"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f9e8cc0-dd0d-4c28-adb4-14a275549a08">
+                    <propertyInstance
+                      Id="411c83d4-7172-496f-84e4-5599fc966f67"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bfc4b394-d704-4bca-b2de-111611434ef7">
+                    <propertyInstance
+                      Id="6e6266ea-d862-4b0c-8782-a5f6b5821924"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ReServer.Diagrams.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="15e688b0-d799-4ca4-9f9f-101224cf2fbc"
+            name="_listener"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="c35d51a2-7e6a-4915-9e1e-cc0d67c37560"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D_listener"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1b3cf515-f60d-450f-92e4-378a9f49f26f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8f7f01e-dd1b-4754-85e8-47c30a434965">
+                    <propertyInstance
+                      Id="f479e9af-9de2-4ac7-ad80-714731ccf027"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e17a88a8-2233-481e-9dde-5c05b4195f8a">
+                    <propertyInstance
+                      Id="0e80a142-a41e-4847-b377-d384335d7f0c"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20e8cc0a-a186-44ba-a5ae-9b8476e034fa">
+                    <propertyInstance
+                      Id="4c4a7c33-25ea-4979-935f-442c10e46c0b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f698678-54b3-4f7b-896a-bd564417b6a4">
+                    <propertyInstance
+                      Id="6a37af7f-f91b-4300-b936-3e7ae7459614"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3359978-0d7c-4901-a715-85e9eb9b9012">
+                    <propertyInstance
+                      Id="128d2113-ba98-4b4b-a00b-887bcdcb3a31"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="12d4d666-4974-428f-9e25-1744b765d716"
+                LastKnownName="HttpListener"
+                LastKnownLocation="Package1_1123.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="baf06fba-bc61-40ed-ba0d-b0f468a45553"
+            name="_uris"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="a52d8f55-2527-4c4c-a895-96810af052e3"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D_uris"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d9fe27c3-3b0c-43c9-8b1f-45550b7ed9c2"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="965901cc-144d-4178-87d9-2b9050689b87">
+                    <propertyInstance
+                      Id="19a40def-52d3-49cc-98b9-8fce84ce2568"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="612f30c0-8ac9-4c0e-bbe9-155ffa5efe02">
+                    <propertyInstance
+                      Id="a8d62cd5-6b13-4a9c-8397-f5ac456948ac"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fbce8d6c-70ec-44dc-82e2-aa8e50ea7bad">
+                    <propertyInstance
+                      Id="1c29734d-346f-4906-8ca2-715a0b859578"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c9ad7d2b-de13-42d4-a8e5-0e2f188f7980">
+                    <propertyInstance
+                      Id="b1307acb-4678-48b3-a687-ddd83b890653"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fa98fe01-cea7-43e1-a280-acf9b49fe4fd">
+                    <propertyInstance
+                      Id="a48cccbc-99c2-465b-ae28-3b0db6caf5f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="323eee0f-312d-44ca-bf12-9d9647cd04ac"
+                LastKnownName="IList&lt;Uri‎&gt;"
+                LastKnownLocation="Package4_1122.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bbdcceb2-fb36-4f7a-9eb9-a9f680494e2f"
+            name="_website"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="127c250b-1c8f-463a-bbeb-564e112a4741"
+                handle="viewcode://./CodeSchema_Field?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D_website"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="48306a53-b3dc-4406-9740-5055a8bc072f"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fe27049c-b428-4c50-822d-b0dfaaadb051">
+                    <propertyInstance
+                      Id="010a0998-2fb3-4ba9-b158-e557b772095d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="389639fb-accc-4d6e-a1ed-166b645d8c01">
+                    <propertyInstance
+                      Id="0f511eaf-581b-44cd-8297-910872592619"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa202761-fb01-49db-b536-31aea5ca5959">
+                    <propertyInstance
+                      Id="978769e3-61d1-49ab-9324-d9c89ae9ec07"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eab64963-1997-4365-954b-b14277a03bdc">
+                    <propertyInstance
+                      Id="0db0675b-3d39-47fa-bc0f-310a226649a8"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6c1fcbe5-fd7f-4137-b7af-7b5c7b5ed3b9">
+                    <propertyInstance
+                      Id="43f632c8-1d9b-435e-81e8-b2de10c2408b"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="f12d242b-e5f4-4f06-ba57-693f0c17c10d"
+                LastKnownName="Site"
+                LastKnownLocation="Package4_1123.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="3ef28e48-caa2-4d3e-b725-957ddd1f8d61"
+            name="HttpSite"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c91e3d8d-6459-4a94-b5c2-5c6a3bf00db4"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReServer.Models%2Fbin%2FDebug%2FReServer.Models.dll&quot; Namespace%3DReServer.Models Type%3DSite)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4ad3938c-70af-457d-a547-d3c612adaa89"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f1e8cebf-1122-4e35-a985-12e64edf31d9">
+                    <propertyInstance
+                      Id="ac38a4c4-009e-42e6-8c87-714ed889c11a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52a586c9-ed7f-4e8a-b06b-9e5f58d81e16">
+                    <propertyInstance
+                      Id="dfb254be-d8fc-4fea-8231-d077f891b859"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9a2fc059-69a6-4194-b29a-22eb7d5cf815">
+                    <propertyInstance
+                      Id="a9dafc59-4e78-4451-be31-83ad8229991f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff33dd35-c064-4639-9b5a-a379fc7d287f">
+                    <propertyInstance
+                      Id="43007525-4c58-4cb2-8c0f-c1497f7bac98"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3ae3798e-b9cb-43b4-838f-d52022842205">
+                    <propertyInstance
+                      Id="3e32fa64-9237-40da-b159-1cd9bce0dbdb"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2fe13ce9-23a4-4181-b7ab-c2e4d3f1db50">
+                    <propertyInstance
+                      Id="4a1c5fb2-74f6-44b3-a173-54ecab0fcc3f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9656b53c-3b3f-43b2-8c3d-2e1aa0848f33"
+                  name="website"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="a3b117cb-38af-4786-a5db-2ed8c07f79aa"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReServer.Models%2Fbin%2FDebug%2FReServer.Models.dll&quot; Namespace%3DReServer.Models Type%3DSite)]) ParameterIdentifier%3Dwebsite"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="f12d242b-e5f4-4f06-ba57-693f0c17c10d"
+                      LastKnownName="Site"
+                      LastKnownLocation="Package4_1123.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="18110d6e-39d1-4234-ab54-72360712e5ca"
+            name="Stop"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="c0a0ab9e-7531-4931-b71b-c7ef6506a95e"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3DStop"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e9fe4b95-c675-48d0-a6c9-75d9e416f3c7"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9bdc879a-3ef6-4542-9335-4acb83220c22">
+                    <propertyInstance
+                      Id="69e4918d-04f6-4c30-891e-4789acbb1a0c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5819a3eb-8f01-4131-b526-8be8277c9790">
+                    <propertyInstance
+                      Id="b8bc882d-9d86-4db5-85a2-ac01d28ef427"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e54779ab-4001-4071-abfa-50d65a5fb9ca">
+                    <propertyInstance
+                      Id="347389ef-8cf8-4230-a619-c82bffc438f2"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f5ccef2b-9755-4615-ad91-41f161249fdc">
+                    <propertyInstance
+                      Id="cf7cbc22-c50c-482c-a650-4ffcd868b7d6"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="92133c6a-18de-4d9a-9104-bad7f1422056">
+                    <propertyInstance
+                      Id="ced33427-9aff-4c23-87de-e1323b2ac104"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23b4a7d9-e566-4bc8-82d4-73032922b2d0">
+                    <propertyInstance
+                      Id="ea64b66d-d262-4782-9ff5-76f6f8273f29"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="9187da79-211b-494c-bffb-60fcac42f825"
+            name="Start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="cda0aeec-c551-43ec-b178-76a09fb3f918"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ff760b7b-4cfd-4870-bb15-f4515342be9d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="97d7d858-7134-4733-b779-2f951df2102d">
+                    <propertyInstance
+                      Id="ec3404b8-ac47-4a3e-99e1-1a05f22cf5b8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c9ed47b-9250-4283-9043-7bee39977f04">
+                    <propertyInstance
+                      Id="2e5b200c-dcfe-4cd8-8ff5-f8a9ae848f9c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1173e4ad-22c1-432a-add8-ada5943ce2f5">
+                    <propertyInstance
+                      Id="c4dae8bd-487b-43d3-8f9b-6f98676e4cad"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="af772f10-ff79-4f1b-b736-e7e859d30990">
+                    <propertyInstance
+                      Id="c88401c6-fdb4-42ff-bb66-744072ab3ef9"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7041b4b5-0af0-453a-b1d2-83877d1dd6c9">
+                    <propertyInstance
+                      Id="3bc74917-472a-47b8-9567-71407d82039e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cdc2c3a1-dcdf-45ef-ad53-a0308116164e">
+                    <propertyInstance
+                      Id="4599c0e1-663b-47d1-9272-7b30d070d66b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="0b725d2e-b9a0-4633-b99f-20c647843d13"
+            name="ProvisionNewThread"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="88e904cb-c90f-4317-8e2a-c0aaa026afb5"
+                handle="viewcode://./CodeSchema_Method?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D(Name%3DProvisionNewThread OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="384783f7-3d2e-4c2f-8912-539f9dc1aa75"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="98479fc8-f151-4dde-a08a-189aea5da0b5">
+                    <propertyInstance
+                      Id="44ec8b7b-8781-442e-a49e-c0a1581399d0"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a95226e-4d79-4040-b08b-451fbaf2404d">
+                    <propertyInstance
+                      Id="9ef9236e-2ab2-4f7b-942f-f92a6dbf79b7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="eebd6b53-185d-4931-8243-76f16c8e6f54">
+                    <propertyInstance
+                      Id="c0e686af-3bbf-4a27-ae2c-8493f78295a6"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f95287c0-d76d-42d6-9662-379d42d977d3">
+                    <propertyInstance
+                      Id="391ec22e-4a1c-4b7c-9a32-707adc33279d"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="867a4b9b-20b8-4d17-9e53-fd5eabae2bb9">
+                    <propertyInstance
+                      Id="daa29266-21e5-482b-a640-3c8adee342e4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f7d2a37-46a8-485b-9b23-a7545189cce8">
+                    <propertyInstance
+                      Id="f89a36f1-fa87-45a8-9fa3-7f7e1c9a687f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aa7c20ff-712d-4e07-8f28-5a622a0f617b"
+                  name="httpContext"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c6363228-14af-4890-8dc7-fbb238ff38c0"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReserver%2Fbin%2FDebug%2FReServer.Server.exe&quot; Namespace%3DReServer.Core Type%3DHttpSite Member%3D(Name%3DProvisionNewThread OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DhttpContext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1bb1990a-f1e5-4b81-bd49-66a69406540b"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package2_1122.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="48ac44c9-14a2-4470-9a64-fb3fe838a221"
+        LastKnownName="Responses"
+        LastKnownLocation="Package2_1123.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="9d880e33-20f2-49cc-9e63-8f318b039030"
+        LastKnownName="Requests"
+        LastKnownLocation="Package3_1123.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

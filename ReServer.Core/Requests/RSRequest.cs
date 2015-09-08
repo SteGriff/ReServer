@@ -11,7 +11,6 @@ namespace ReServer.Core.Requests
 {
     public class RSRequest
     {
-        public Uri RequestUri { get; private set; }
         public string LocalPath { get; private set; }
         public Site Website { get; private set; }
         public string ContentType { get; private set; }
@@ -48,7 +47,10 @@ namespace ReServer.Core.Requests
             Cookies = httpRequest.Cookies;
 
             //Get the username and password
-            Identity = ((HttpListenerBasicIdentity)context.User.Identity);
+            if (context.User != null)
+            { 
+                Identity = ((HttpListenerBasicIdentity)context.User.Identity);
+            }
         }
 
         /// <summary>

@@ -1,11 +1,10 @@
-﻿using ReServer.Core.Configuration;
-using ReServer.Models;
-using ReServer.Server;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading;
+using ReServer.Models;
+using ReServer.Server;
 
 namespace ReServer.Core
 {
@@ -51,8 +50,11 @@ namespace ReServer.Core
             _listener = new HttpListener();
 
             //Set up client authentication
-            _listener.AuthenticationSchemes = AuthenticationSchemes.Basic;
-            _listener.Realm = _website.Name;
+            if (_website.ProtectedActions != Protectorate.none)
+            { 
+                _listener.AuthenticationSchemes = AuthenticationSchemes.Basic;
+                _listener.Realm = _website.Name;
+            }
 
             // Bind the listener to all of the remote web addresses
             // specified in the config

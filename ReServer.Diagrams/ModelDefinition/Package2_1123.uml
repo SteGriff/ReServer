@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="48ac44c9-14a2-4470-9a64-fb3fe838a221"
+  name="Responses"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="daa96888-a1bb-40ad-8e1a-e38a84c21cdb"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReServer.Core.Responses"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="5b78550b-3288-4368-917d-871c4045f959"
+        name="RSResponse"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3c75cd97-9066-4036-a157-f285aaa0cac0"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FSte%2FSkyDrive%2FDocuments%2FProgramming%2FVS Projects%2FReserver%2FReServer.Core%2Fbin%2FDebug%2FReServer.Core.dll&quot; Namespace%3DReServer.Core.Responses Type%3DRSResponse"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9819d054-a4b6-4cb2-9e82-5fc0b4db21a7"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e5a225fd-6867-49c3-abed-7bd81c6e7c76">
+                <propertyInstance
+                  Id="dcb333b4-af6c-4ae3-ae12-b5110b5e544c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a28b3d9-03b6-4df5-90f9-5d11630b2c7b">
+                <propertyInstance
+                  Id="f3968877-112f-41db-a4f5-343e70209c3c"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c216f050-d25d-4a7b-b3f2-a169400b1a8b">
+                <propertyInstance
+                  Id="b4684735-255e-4d83-909c-f718999c117d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bce7437b-4426-409a-a652-db679026e08d">
+                <propertyInstance
+                  Id="a41a6f0a-9091-41ed-a085-41d7676f425e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8edfdb41-46dc-4ccd-a4ca-6f7a0a1c045d">
+                <propertyInstance
+                  Id="57df45c0-5637-4292-86d3-42530a8e808a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

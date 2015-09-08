@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-09-07T11:31:39" Importance="High" Text="Reverse Engineering Started." />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ea556083-5a32-4288-89fa-057a55552fb0' -  (ClassifierTemplateParameter)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer' -  (Package)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models' -  (Package)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Protectorate' -  (Enumeration)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Medium" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site' -  (Class)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::_remoteAddresses' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::IsMappedToUriDomain' -  (Operation)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::IsMappedToUriDomain::uri' -  (Parameter)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::Local' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::Name' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::ProtectedActions' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::RemoteAddresses' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::RemoteAddressStrings' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::Site' -  (Operation)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::Site::Users' -  (Property)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::ReServer::Models::User' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System' -  (Package)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections' -  (Package)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections::Generic' -  (Package)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections::Generic::List' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections::Generic::List&lt;String‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections::Generic::List&lt;Uri‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Collections::Generic::List&lt;User‎&gt;' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'ReServer.Diagrams::System::Uri' -  (Class)   (partially reverse engineered - definition not updated) " />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Element reverse engineered into the UML model: 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::ReServer::Models::Site to ReServer.Diagrams::System::Collections::Generic::List&lt;String‎&gt; (Association)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::ReServer::Models::Site to ReServer.Diagrams::ReServer::Models::Protectorate (Association)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::ReServer::Models::Site to ReServer.Diagrams::System::Collections::Generic::List&lt;User‎&gt; (Association)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::ReServer::Models::Site to ReServer.Diagrams::System::Collections::Generic::List&lt;Uri‎&gt; (Association)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::System::Collections::Generic::List&lt;String‎&gt; to ReServer.Diagrams::System::Collections::Generic::IList&lt;String‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="Diagnostic" Text="Relationship reverse engineered into the UML model: ReServer.Diagrams::System::Collections::Generic::List&lt;Uri‎&gt; to ReServer.Diagrams::System::Collections::Generic::IList&lt;Uri‎&gt; (InterfaceRealization)" />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="High" Text="(1) type(s) fully reverse engineered." />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="High" Text="(7) type(s) partially reverse engineered.  These types were not included in the original selection so their full definitions are not reverse engineered.  Instead, this shallow operation has simply ensured these types exist in the UML model because they are needed in order to fully describe other elements." />
+  <Message Timestamp="2015-09-07T11:31:43" Importance="High" Text="The reverse engineering operation completed with (0) error(s), and (0) warning(s)." />
+</Log>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="115581f6-e819-4fc8-aa01-5ce3f78fb649"
+  name="ReServer"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="57c70f4d-73cd-4c98-94bf-484ad47b874a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DReServer"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="b6a0c266-4e21-4464-aae3-cd93bda15dce"
+        LastKnownName="Core"
+        LastKnownLocation="Package1_1122.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="479d5951-ebd8-49ee-95c6-626cc2d93282"
+        LastKnownName="Server"
+        LastKnownLocation="Package_1123.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3049237a-5033-444f-99f0-eaa3f3aec1d2"
+        LastKnownName="Models"
+        LastKnownLocation="Package4_1123.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3d70161e-151f-46ce-8dad-3fb6463a4664"
+        LastKnownName="Extensions"
+        LastKnownLocation="Package_1129.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
